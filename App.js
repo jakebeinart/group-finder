@@ -7,6 +7,7 @@ import { createSwitchNavigator,
 		 createBottomTabNavigator,
 		 createStackNavigator } from 'react-navigation';
 import EventListItem from './components/EventListItem'
+import { ScrollView } from 'react-native-gesture-handler';
 
 class WelcomeScreen extends React.Component{
 	render() {
@@ -23,6 +24,7 @@ class WelcomeScreen extends React.Component{
 class Events extends React.Component{
 	render() {
 		return (
+			<ScrollView style={{flex: 1}}>
 			<View style={{flex:1, backgroundColor: '#f0f0f0'}}>
 				<EventListItem
 					eventTitle="Drinks at Nick's Pub for Women's World Cup"
@@ -58,6 +60,7 @@ class Events extends React.Component{
 					currentAttendees={8}
 				/>
 			</View>
+			</ScrollView>
 		);
 	}
 };
